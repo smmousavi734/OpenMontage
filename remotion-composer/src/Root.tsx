@@ -16,6 +16,7 @@ import { ProductReveal, ProductRevealProps } from "./components/ProductReveal";
 import { CaptionOverlay, WordCaption } from "./components/CaptionOverlay";
 import { CollageBurst, CollageBurstProps } from "./CollageBurst";
 import { LyricOverlay, LyricOverlayProps } from "./LyricOverlay";
+import { SnapeMemorial, SnapeMemorialProps } from "./SnapeMemorial";
 
 // ---------------------------------------------------------------------------
 // Theme System — prevents every video from looking like dark fintech
@@ -149,6 +150,15 @@ export const Root: React.FC = () => {
           audio: {},
         }}
         calculateMetadata={calculateMetadata}
+      />
+      <Composition
+        id="SnapeMemorial"
+        component={SnapeMemorial}
+        durationInFrames={30 * 60}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ titleFontSize: 40 } as SnapeMemorialProps}
       />
       <Composition
         id="CinematicRenderer"
